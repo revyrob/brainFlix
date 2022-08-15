@@ -1,0 +1,51 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    max-width: $desktop-width;
+    width: 100%;
+    margin: 0 auto;
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-between;
+    }
+    &__search{
+        height: 2.5rem;
+        border: 1px solid $color-light;
+        border-radius: 5px;
+        
+    }
+    &__logo {
+        height: 1.5rem;
+    }
+    &__button {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        border: none;
+        background-color: $color-dark2;
+        color: $color-accent;
+        border-radius: 5px;
+        width:10rem;
+        padding: .5rem 0 .5rem .5rem;
+        &--icon {
+            height: 1.5rem;
+            padding-right: 1.5rem
+        }
+    }
+    &__user {
+        border-radius: 50%;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-size: cover;
+        background-position: center;
+    }
+}
