@@ -5,7 +5,8 @@
 .mainArticle {
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 52vw;
+    margin-bottom: 3rem;
     
     &__title {
         font-weight: 700;
@@ -16,6 +17,7 @@
     &__article{
         margin-top: 1rem;
         line-height: 1.5rem;
+        padding-right: 1.5rem;
     }
     &__infoBar {
         display: flex;

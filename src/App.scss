@@ -46,3 +46,8 @@
   width: 100%;
   margin: 0 auto; //same as the other items left of nav bar
 }
+
+.leftMain{
+  display: flex;
+  flex-direction: column;
+}
