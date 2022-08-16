@@ -1,0 +1,51 @@
+@use '../../styles/partials/reset' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.mainArticle {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    
+    &__title {
+        font-weight: 700;
+        font-size: 3rem;
+        margin: 0;
+        margin-top: 1.5rem
+    }
+    &__article{
+        margin-top: 1rem;
+        line-height: 1.5rem;
+    }
+    &__infoBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 2px solid $color-light;
+        padding-right: 1.5rem;
+        &__div{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 30%;
+        }
+        &--author{
+            font-weight: 700;
+            margin: 1rem 0 1rem;
+            font-size: 1rem;
+        }
+        &--date{
+            color: $color-light;
+            font-size: 0.9rem;
+            
+        }
+        &--views{
+            color: $color-light;
+            font-size: 0.9rem;
+        }
+        &--likes{
+            color: $color-light;
+            font-size: 0.9rem;
+        }
+    }
+}

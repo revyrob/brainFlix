@@ -1,0 +1,32 @@
+@use '../../styles/partials/reset' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.article {
+    display: flex;
+    justify-content:left;
+    align-items:center;
+    width: 30vw;
+    height: 6.5rem;
+    color: $color-dark;
+    
+    &__img{
+        width: 8rem;
+        height: 5rem;
+        border-radius: 10px;
+        margin-right: 2rem;
+    }
+    &__infoBar {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5rem;
+        &--title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: .75rem;
+        }
+        &--author {
+            font-size: 1rem;
+        }
+    }
+}

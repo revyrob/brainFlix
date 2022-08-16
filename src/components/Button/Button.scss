@@ -1,0 +1,19 @@
+@use '../../styles/partials/reset' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: none;
+    background-color: $color-dark2;
+    color: $color-accent;
+    border-radius: 5px;
+    width:10rem;
+    padding: .5rem 0 .5rem .5rem;
+    &--icon {
+        height: 1.5rem;
+        padding-right: 1.5rem
+    }
+}

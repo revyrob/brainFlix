@@ -2,6 +2,13 @@
 @use '../../styles/partials/mixins' as *;
 
 .hero {
-    background-color: $color-dark;
+    background-color: $color-dark-sec;
     height: 80vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__video {
+        height: 80vh;
+    }
 }

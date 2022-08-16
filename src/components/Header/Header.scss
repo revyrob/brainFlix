@@ -1,3 +1,4 @@
+@use '../../styles/partials/reset' as *;
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
@@ -9,22 +10,23 @@
     padding: 1rem 0;
     max-width: $desktop-width;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto; //same as the other items left of nav bar
 
     &__nav {
         display: flex;
         flex-direction: row;
         width: 50%;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
     &__search{
         height: 2.5rem;
+        width: 50%;
         border: 1px solid $color-light;
         border-radius: 5px;
-        
+        margin: 0 2rem; //same as the other items left of nav bar
     }
     &__logo {
-        height: 1.5rem;
+        height: 1.75rem;
     }
     &__button {
         display: flex;
@@ -36,6 +38,7 @@
         border-radius: 5px;
         width:10rem;
         padding: .5rem 0 .5rem .5rem;
+        margin: 0 2rem; //same as the other items left of nav bar
         &--icon {
             height: 1.5rem;
             padding-right: 1.5rem
@@ -45,7 +48,9 @@
         border-radius: 50%;
         height: 2.5rem;
         width: 2.5rem;
-        background-size: cover;
+        background-size:cover;
         background-position: center;
+        
+        margin: 0 2rem; //same as the other items left of nav bar
     }
 }

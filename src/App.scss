@@ -1,3 +1,6 @@
+@use './styles/partials/variables' as *;
+@use './styles/partials/mixins' as *;
+
 .App {
   text-align: center;
 }
@@ -35,4 +38,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main {
+  display: flex;
+  max-width: $desktop-width;
+  width: 100%;
+  margin: 0 auto; //same as the other items left of nav bar
 }
