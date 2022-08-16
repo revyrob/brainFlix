@@ -8,9 +8,9 @@ import user from '../../assets/Images/Mohan-muruge.jpg';
 
 function Header () {
     return (
-      <header class="header">
+      <header className="header">
         <img src={logoIcon} className="header__logo" alt="Brainflix logo" />
-      <nav class="header__nav">
+      <nav className="header__nav">
         <input className='header__search' placeholder="🔍 Search"></input>
        <Button className='header__button' icon={uploadIcon} alt="upload icon" text="UPLOAD"/>
       <img src={user} className="header__user" alt="user" />
