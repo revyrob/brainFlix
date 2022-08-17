@@ -5,15 +5,15 @@ import likes from '../../assets/Icons/likes.svg';
 function MainArticle(props) {
     return (
         <section className='mainArticle'>
-        <h1 className='mainArticle__title'>{props.item[0].title}</h1>
+        <h1 className='mainArticle__title'>{props.item.title}</h1>
         <div className='mainArticle__infoBar'>
-            <h2 className='mainArticle__infoBar--author'>{props.item[0].channel}</h2>
-            <p className='mainArticle__infoBar--date'>{props.item[0].timestamp}</p>
-            <p className='mainArticle__infoBar--views'><img src={views} alt='view icon'/>{props.item[0].views}</p>
-            <p className='mainArticle__infoBar--likes'><img src={likes} alt='view icon'/>{props.item[0].likes}</p>
+            <h2 className='mainArticle__infoBar--author'>{props.item.channel}</h2>
+            <p className='mainArticle__infoBar--date'>{props.item.timestamp}</p>
+            <p className='mainArticle__infoBar--views'><img src={views} alt='view icon'/>{props.item.views}</p>
+            <p className='mainArticle__infoBar--likes'><img src={likes} alt='view icon'/>{props.item.likes}</p>
         </div>
         <div className='mainArticle__article'>
-            {props.item[0].description}
+            {props.item.description}
         </div>
         </section>
 //         <section className='mainArticle'>

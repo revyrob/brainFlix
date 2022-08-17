@@ -1,0 +1,46 @@
+@use '../../styles/partials/reset' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.commentArea {
+    border-bottom: 2px solid $color-light;
+    padding-bottom: 1.25rem;
+    &__wrapper {
+        margin: 0 1.5rem 0 1rem;
+        &--image{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        &--input {
+            flex-direction: column;
+        }
+    }
+    &__numberComments {
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+    &__user-user {
+       
+        border-radius: 50%;
+        height: 2.5rem;
+        width: 2.5rem;
+        
+    }
+    &__title {
+        text-transform: uppercase;
+        color: $color-light;
+        margin-bottom: .5rem;
+    }
+    &__input{
+        width: 32vw;
+        height: 2.5rem;
+        border: 1px solid $color-light;
+        border-radius: 5px;
+    }
+    &__btn {
+        margin: 0 1rem;
+    }
+}

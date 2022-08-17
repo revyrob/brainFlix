@@ -2,3 +2,28 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
+.comment {
+    display: flex;
+    flex-direction: row;
+    &__wrapper {
+        &--image {
+            flex-direction: column;
+        }
+    }
+    &__user-image {
+        height: 2.5rem;
+        width: 2.5rem;
+        background: $color-light;
+        border-radius: 50%;
+
+    }
+    &__header {
+        flex-direction: row;
+    }
+    &__name {
+        font-weight: bold;
+    }
+    &__date {
+        color: $color-light;
+    }
+}
