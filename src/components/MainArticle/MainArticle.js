@@ -3,12 +3,14 @@ import views from '../../assets/Icons/views.svg';
 import likes from '../../assets/Icons/likes.svg';
 
 function MainArticle(props) {
+    const newDate = new Date(props.item.timestamp).toLocaleDateString();
+    console.log(newDate);
     return (
         <section className='mainArticle'>
         <h1 className='mainArticle__title'>{props.item.title}</h1>
         <div className='mainArticle__infoBar'>
             <h2 className='mainArticle__infoBar--author'>{props.item.channel}</h2>
-            <p className='mainArticle__infoBar--date'>{props.item.timestamp}</p>
+            <p className='mainArticle__infoBar--date'>{newDate}</p>
             <p className='mainArticle__infoBar--views'><img src={views} alt='view icon'/>{props.item.views}</p>
             <p className='mainArticle__infoBar--likes'><img src={likes} alt='view icon'/>{props.item.likes}</p>
         </div>

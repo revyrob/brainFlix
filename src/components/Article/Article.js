@@ -6,7 +6,7 @@ function Article(props) {
         <img className='article__img' src={props.image} alt='article' />
         <div className='article__infoBar'>
             <h3 className='article__infoBar--title'>{props.title}</h3>
-            <p className='article__infoBar--author'>{props.author}</p>
+            <p className='article__infoBar--author'>{props.channel}</p>
         </div>
         </section>
         // <section className='article'>

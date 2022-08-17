@@ -8,6 +8,7 @@ function CommentArea(props) {
     return (
         <section className='commentArea'>
         <p className='commentArea__numberComments'>
+            {/* how to minus one in the length */}
         {props.item.comments.length} Comments
         </p>
         <div className='commentArea__wrapper'>
@@ -26,10 +27,11 @@ function CommentArea(props) {
         </div>
         {props.item.comments.map((user) =>
             <Comment
+            key = {user.id}
             name = {user.name}
             comment = {user.comment}
             likes = {user.likes}
-            date = {user.timestamp}
+            timestamp = {user.timestamp}
             />
             )}
         </section>

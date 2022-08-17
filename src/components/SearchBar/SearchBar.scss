@@ -1,0 +1,36 @@
+@use '../../styles/partials/reset' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.searchbar{
+    height: 2.5rem;
+    width: 54%;
+    border: 1px solid $color-light;
+    border-radius: 5px;
+    margin: 0 2rem; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &__icon {
+        color:grey;
+        padding-left:.5rem;
+    }
+    &__input {
+        outline: none; 
+        margin-left:1.5rem;
+        width:100%;
+        
+    }
+}
+//no border on search bar input and when active/focus
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    &:focus {
+        outline: none; 
+    }
+}
+
