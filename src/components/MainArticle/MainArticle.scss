@@ -15,14 +15,13 @@
         align-items: center;   
         &--left{
             display: flex;
-            width: 25%;
+            width: 30%;
             justify-content: space-between;
             align-items: center;
-    
         }
         &--right{
             display: flex;
-            width: 25%;
+            width: 30%;
             justify-content: space-between;
             align-items: center;
         }
@@ -42,13 +41,16 @@
         justify-content: space-between;
         align-items: baseline;
         border-bottom: 2px solid $color-light-sec;
+        // padding-right: 2rem;
+        margin-top: 1rem;
+        line-height: 1.5rem;
         padding-right: 1.5rem;
         &__div{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: baseline;
-            width: 30%;
+            // width: 30%;
             
         }
         &--author{
@@ -61,6 +63,7 @@
             font-size: 0.9rem;
             
         }
+        //need to adjust
         &--views{
             color: $color-light;
             font-size: 0.9rem;
@@ -69,6 +72,7 @@
             margin-left:.4rem;
            
         }
+        //need to adjust
         &--likes{
             color: $color-light;
             font-size: 0.9rem;

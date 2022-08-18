@@ -2,27 +2,22 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.searchbar{
+.inputBar{
     height: 2.5rem;
-    width: 54%;
+    width: 100%;
     border: 1px solid $color-light-sec;
     border-radius: 5px;
-    margin: 0 2rem; 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
     padding-left: 1rem;
-    
     &__icon {
         color:$color-light;
-        // padding-left:.5rem;
     }
     &__input {
         outline: none; 
-        margin-left:1.5rem;
         width:100%;
-        
     }
 }
 //no border on search bar input and when active/focus

@@ -3,29 +3,29 @@
 @use '../../styles/partials/mixins' as *;
 
 .commentArea {
-    
+    width:100%;
     &__wrapper {
-        margin: 0 1.5rem 0 1rem;
-        &--image{
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: space-between;
-        }
-        &--input {
-            flex-direction: column;
-            
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 2px solid $color-light-sec;
+        padding: 2rem 1rem;
+        &--input{
+            width: 90%;
+            margin: 0 1rem;//push the side from the userPic and the button
         }
     }
     &__numberComments {
         font-weight: 700;
-        margin-bottom: 1.5rem;
     }
-    &__user-user {
+    &__user {
         border-radius: 50%;
         height: 2.5rem;
         width: 2.5rem;
-        
+        background-image: url(../../assets/Images/Mohan-muruge.jpg);
+        background-size: cover;
+        display: flex;     
     }
     &__title {
         text-transform: uppercase;
@@ -35,24 +35,23 @@
         font-weight: 500;
     }
     &__input{
-        width: 32vw;
-        height: 2rem;
-        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        // padding-left: 1rem;
+        width: 90%;
+        margin: 0 2rem;
         &--input{
-            height: 2.5rem;
-            width: 54%;
-            border: 1px solid $color-light-sec;
-            border-radius: 5px;
-            
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: left;
-            padding-left: 1rem;
+            width: 90%;
         }
     }
     &__btn {
         margin: 0 1rem;
+        &--div {
+            width: 30%;
+        }
+        
+        
     }
 }
 input {
