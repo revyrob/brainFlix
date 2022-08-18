@@ -5,14 +5,32 @@
 .mainArticle {
     display: flex;
     flex-direction: column;
-    width: 52vw;
     margin-bottom: 3rem;
+    color: $color-dark;
     
+    &__div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;  
+        align-items: center;   
+        &--left{
+            display: flex;
+            width: 25%;
+            justify-content: space-between;
+            align-items: center;
+    
+        }
+        &--right{
+            display: flex;
+            width: 25%;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
     &__title {
         font-weight: 700;
-        font-size: 3rem;
-        margin: 0;
-        margin-top: 1.5rem
+        font-size: 2.5rem;
+        margin: 2.5rem 0 1rem;
     }
     &__article{
         margin-top: 1rem;
@@ -23,13 +41,15 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        border-bottom: 2px solid $color-light;
+        border-bottom: 2px solid $color-light-sec;
         padding-right: 1.5rem;
         &__div{
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: baseline;
             width: 30%;
+            
         }
         &--author{
             font-weight: 700;
@@ -44,10 +64,20 @@
         &--views{
             color: $color-light;
             font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            margin-left:.4rem;
+           
         }
         &--likes{
             color: $color-light;
             font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            margin-left:.4rem;
+        }
+        &--icon{
+            height: 1.2rem;
         }
     }
 }

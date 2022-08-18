@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import { useState } from 'react';
 import './App.scss';
 import Header from './components/Header/Header';
@@ -19,10 +18,21 @@ function App() {
 
   //useState for video in main bar
   const [mainVideo, setMainVideo] = useState(initialFullVideos[0]);
-console.log(initialFullVideos[0]);
 
   // setVideos();
   //event handler on clicking on a video
+
+  //filter videos between videos and mainVideo
+  //use vidoes and mainVideo use filter so id of videos is not the same id as mainVideo
+  //then return a filtered array and put it into videoData
+  // const filterVideo = (id) => {videos
+  //   const 
+  // }
+
+  // const selectAlbum = (id) => {
+  //   const foundAlbum = albums.find((album) => album.id === id);
+  //   setActiveAlbum(foundAlbum);
+  // };
   
 
   return (
@@ -34,7 +44,7 @@ console.log(initialFullVideos[0]);
       <section className='leftMain'>
     <MainArticle item={mainVideo}/>
     <CommentArea item={mainVideo}/>
-    <Comment />
+    
     </section>
     <ArticleList item={videos}/>
     </section>

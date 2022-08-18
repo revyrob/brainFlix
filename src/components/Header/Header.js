@@ -12,6 +12,7 @@ function Header () {
       <nav className="header__nav">
         <SearchBar />
        <Button className='header__button' icon={uploadIcon} alt="upload icon" text="UPLOAD"/>
+
       <img src={user} className="header__user" alt="user" />
       </nav>
     </header>

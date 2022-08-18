@@ -3,12 +3,13 @@
 @use '../../styles/partials/mixins' as *;
 
 .articleList {
-    border-left: 2px solid $color-light;
+    border-left: 2px solid $color-light-sec;
     padding-left: 1.5rem;
     color: $color-light;
     padding-top: 2rem;
     &__title {
         margin-bottom: 1rem;
+        font-weight: 500;
     }
 
 }

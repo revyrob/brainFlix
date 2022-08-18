@@ -5,16 +5,18 @@
 .searchbar{
     height: 2.5rem;
     width: 54%;
-    border: 1px solid $color-light;
+    border: 1px solid $color-light-sec;
     border-radius: 5px;
     margin: 0 2rem; 
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    padding-left: 1rem;
+    
     &__icon {
-        color:grey;
-        padding-left:.5rem;
+        color:$color-light;
+        // padding-left:.5rem;
     }
     &__input {
         outline: none; 
@@ -29,6 +31,7 @@ input {
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: hidden;
+    color: $color-dark;
     &:focus {
         outline: none; 
     }

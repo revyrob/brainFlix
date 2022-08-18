@@ -6,16 +6,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 2px solid $color-light;
-    margin: 1rem;
-    padding-bottom: 1rem;
+    border-bottom: 2px solid $color-light-sec;
+    padding: 2rem 1rem;
+   
     &__wrapper {
         width: 90%;
         margin-right:1rem;
         line-height: 1.5rem;
-        &--image {
-            flex-direction: column;
-        }
     }
     &__user-image {
         height: 2.5rem;
@@ -30,6 +27,7 @@
     }
     &__name {
         font-weight: bold;
+        margin-bottom: 0.5rem;
     }
     &__date {
         color: $color-light;

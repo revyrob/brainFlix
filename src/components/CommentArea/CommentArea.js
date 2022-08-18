@@ -4,12 +4,13 @@ import commentIcon from '../../assets/Icons/add_comment.svg';
 import user from '../../assets/Images/Mohan-muruge.jpg';
 import Comment from '../Comment/Comment';
 
-function CommentArea(props) {
+function CommentArea({item}) {
+    // const commentLength = length - 1;
     return (
         <section className='commentArea'>
         <p className='commentArea__numberComments'>
             {/* how to minus one in the length */}
-        {props.item.comments.length} Comments
+        {item.comments.length} Comments
         </p>
         <div className='commentArea__wrapper'>
         <div className='commentArea__wrapper--image'>
@@ -20,14 +21,16 @@ function CommentArea(props) {
         <h2 className='commentArea__title'>
         Join the Conversation
         </h2>
+        <div className='commentArea__input--input'>
         <input className='commentArea__input' placeholder="Add a new comment" type='text' name="comment"></input>
+        </div>
         </div>
         <Button className="commentArea__btn" icon={commentIcon} alt="comment icon" text="COMMENT"/>
         </div>
         </div>
-        {props.item.comments.map((user) =>
+        {item.comments.map((user, index) =>
             <Comment
-            key = {user.id}
+            key = {index}
             name = {user.name}
             comment = {user.comment}
             likes = {user.likes}

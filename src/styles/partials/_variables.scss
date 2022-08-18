@@ -1,6 +1,7 @@
+@use './typography' as *;
 
 // fonts
-$font-primary: 'AvenirNext LT Pro', sans-serif;
+$font-primary: 'AvenirNext LT Pro';
 // primary colors
 $color-dark: #323232;
 $color-dark2: #0095FF;

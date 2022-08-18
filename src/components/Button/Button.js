@@ -1,9 +1,9 @@
 import './Button.scss';
 
 
-function Button (props) {
+function Button ({icon, alt, text}) {
     return(
-        <button className="button"><img src={props.icon} className="header__button--icon" alt={props.alt} />{props.text}</button>
+        <button className="button"><img src={icon} className="header__button--icon" alt={alt} />{text}</button>
     )
 }
 export default Button;

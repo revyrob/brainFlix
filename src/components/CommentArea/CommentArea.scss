@@ -2,9 +2,8 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-
 .commentArea {
-   
+    
     &__wrapper {
         margin: 0 1.5rem 0 1rem;
         &--image{
@@ -15,6 +14,7 @@
         }
         &--input {
             flex-direction: column;
+            
         }
     }
     &__numberComments {
@@ -22,7 +22,6 @@
         margin-bottom: 1.5rem;
     }
     &__user-user {
-       
         border-radius: 50%;
         height: 2.5rem;
         width: 2.5rem;
@@ -32,14 +31,34 @@
         text-transform: uppercase;
         color: $color-light;
         margin-bottom: .5rem;
+        font-size: 1rem;
+        font-weight: 500;
     }
     &__input{
         width: 32vw;
-        height: 2.5rem;
-        border: 1px solid $color-light;
+        height: 2rem;
         border-radius: 5px;
+        &--input{
+            height: 2.5rem;
+            width: 54%;
+            border: 1px solid $color-light-sec;
+            border-radius: 5px;
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            padding-left: 1rem;
+        }
     }
     &__btn {
         margin: 0 1rem;
+    }
+}
+input {
+    // border: 1px solid $color-light-sec;
+    padding-left: 1rem;
+    &::placeholder {
+        color: $color-dark;
     }
 }

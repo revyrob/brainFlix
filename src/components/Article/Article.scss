@@ -10,11 +10,13 @@
     height: 6.5rem;
     color: $color-dark;
     
+    //working on making the images the same size
     &__img{
-        width: 8rem;
-        height: 5rem;
-        border-radius: 10px;
-        margin-right: 2rem;
+        min-width: 30%;
+        max-width: 115px;
+        height: 80%;
+        border-radius: 5px;
+        margin-right:1rem;
     }
     &__infoBar {
         display: flex;
@@ -22,7 +24,7 @@
         line-height: 1.5rem;
         &--title {
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1rem;
             margin-bottom: .75rem;
         }
         &--author {

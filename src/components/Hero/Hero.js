@@ -1,12 +1,12 @@
 import './Hero.scss';
 // import video from '../../Data/videos.json'
 
-function Hero (props) {
+function Hero ({item}) {
   
     return (
       <>
       <section className='hero'>
-        <video className="hero__video" width="80%" poster={props.item.image} controls>
+        <video className="hero__video" poster={item.image} controls>
           <source src="" type='video/mp4'></source>
           Sorry, your browser doesn't support embedded videos
           </video>
