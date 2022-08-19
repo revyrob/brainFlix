@@ -4,27 +4,76 @@
 
 .header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem 0;
-    max-width: $desktop-width;
-    width: 83%;
-    margin: 0 auto; //same as the other items left of nav bar
-
+    margin: 0;
+    height: 35vh;
+    height: 10rem;
+    @include tablet {
+        height: 4rem;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100vw;
+        padding:0 2rem;
+    }
+    @include desktop {
+        max-width: $desktop-width;
+        width: 90%;
+        margin: 0 auto; //same as the other items left of nav bar
+    }
+    
     &__nav {
         display: flex;
-        flex-direction: row;
-        width: 50%;
-        justify-content: flex-end;
+        flex-direction: column;
+        width: 95vw;
+        justify-content: space-around;
+        align-items: flex-start;
+        @include tablet {
+            flex-direction: row;
+            width: 60vw;
+            justify-content: center;
+            align-items: center;
+        }
+        
     }
     &__search{
-        width: 60%;
-        // line-height: 1.5rem;
-        margin: 0 2rem; //same as the other items left of nav bar
+        display: flex;
+        height: 2.5rem;
+        width: 80vw;
+        border: 1px solid $color-light-sec;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: left;
+        padding-left: 1rem;
+        @include tablet {
+            width: 70%;
+            margin: 0;
+            // margin: 0 2rem; //same as the other items left of nav bar
+        }
+        &--div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            width: 95vw;
+            @include tablet {
+                margin:0;
+                width: 40vw;
+                flex:auto;
+            }
+        }
     }
     &__logo {
+        margin: 0;
         height: 1.75rem;
+        margin-bottom: 1rem;
+        @include tablet {
+            margin-bottom: 0;
+            margin-left: 2rem;
+            height: 1.75rem;
+        }
     }
     &__button {
         display: flex;
@@ -34,27 +83,49 @@
         background-color: $color-dark2;
         color: $color-accent;
         border-radius: 5px;
-        width:10rem;
+        width:95vw;
         padding: .5rem 0 .5rem .5rem;
-        margin: 0 2rem; //same as the other items left of nav bar
+        @include tablet {
+            width: 8rem;
+        }
+        @include desktop {
+            width:10rem;
+            margin: 0 2rem; //same as the other items left of nav bar
+        }
         &--div{
-            width: 35%;
+            width: 100%;
+            @include tablet {
+                width: 35%;
+            }
         }
         &--icon {
             height: 1.5rem;
             padding-right: 1.5rem
         }
     }
+    
     &__user {
-        margin-left: 2rem; 
+        margin: 0;
         border-radius: 50%;
         height: 2.5rem;
         width: 2.5rem;
-        background-image: url(../../assets/Images/Mohan-muruge.jpg);
         background-size: cover;//same as the other items left of nav bar
-        &--div {
-            width: 25%;
+        @include tablet {
+            margin: 0 auto;
+            margin-left: 2rem;
         }
+    }
+    &__userMobile {
+        margin: 0;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__userTablet {
+        display: none;
+                @include tablet {
+                    display: flex;
+                }
     }
     
 }

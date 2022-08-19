@@ -42,13 +42,30 @@
 
 .main {
   display: flex;
-  max-width: $desktop-width;
-  width: 83%;
-  margin: 0 auto; //same as the other items left of nav bar
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include tablet {
+    margin: 0;
+  }
+  @include desktop {
+    max-width: $desktop-width;
+    width: 83%;
+    flex-direction: row;
+    margin: 0 auto; //same as the other items left of nav bar
+  }
 }
 
 .leftMain{
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-direction: column;
+  @include tablet {
+    margin: 0 2rem;
+  }
+}
+
+body{
+  font-family: $font-primary;
 }

@@ -4,13 +4,19 @@
 
 .articleList {
     border-left: 2px solid $color-light-sec;
-    padding-left: 1.5rem;
+    padding: 1rem;
     color: $color-light;
-    padding-top: 2rem;
-    width: 23%;
+    @include desktop {
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+    }
     &__title {
-        margin-bottom: 1rem;
-        font-weight: 500;
+        padding-bottom: 1rem;
+        font-weight: 400;
+        font-size: 1rem;
+        @include desktop {
+            margin-bottom: 1rem;
+        }
     }
 
 }

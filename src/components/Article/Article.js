@@ -1,24 +1,18 @@
 import './Article.scss';
 
 
-function Article({image, title, channel}) {
+function Article({image, title, channel, handler, id}) {
     return (
-        <section className='article'>
-            
-        <img className='article__img' src={image} alt='article' />
-       
-        <div className='article__infoBar'>
-            <h3 className='article__infoBar--title'>{title}</h3>
-            <p className='article__infoBar--author'>{channel}</p>
+        <article onClick={() => handler(id)} className='article'>
+        <div className='article__img--div'>
+        <img className='article__img' src={image} alt={title} />
         </div>
-        </section>
-        // <section className='article'>
-        // <img className='article__img' src='https://i.imgur.com/l2Xfgpl.jpg' alt='article' />
-        // <div className='article__infoBar'>
-        //     <h3 className='article__info'>Title</h3>
-        //     <p className='article__infoBar--author'>Author</p>
-        // </div>
-        // </section>
+        <div className='article__infoBar'>
+        <h3 className='article__infoBar--title'>{title}</h3>
+        <p className='article__infoBar--author'>{channel}</p>
+        </div>
+        </article>
+        
         )
     }
     export default Article;

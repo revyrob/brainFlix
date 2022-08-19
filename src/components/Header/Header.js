@@ -4,22 +4,28 @@ import logoIcon from '../../assets/Logo/BrainFlix-logo.svg';
 import uploadIcon from '../../assets/Icons/upload.svg';
 import InputBar from '../InputBar/InputBar';
 import searchIcon from '../../assets/Icons/search.svg'
+import user from '../../assets/Images/Mohan-muruge.jpg';
 
 function Header () {
     return (
       <header className="header">
         <img src={logoIcon} className="header__logo" alt="Brainflix logo" />
-      <nav className="header__nav">
-      <div className='header__search'>
-        <InputBar className='header__search' icon={searchIcon} placeholder="Search" alt="search icon" name="search"/>
-        </div>
-        <div className='header__button--div'>
-       <Button className='header__button' icon={uploadIcon} alt="upload icon" text="UPLOAD"/>
-       </div>
-       <div className='header__user--div'>
-      <div className="header__user"></div>
-      </div>
-      </nav>
+          <nav className="header__nav">
+            <div className='header__search--div'>
+              <InputBar className='header__search' icon={searchIcon} placeholder="Search" alt="search icon" name="search"/>
+              
+              <div className='header__userMobile'>
+                <img src={user} className="header__user" alt="user"/>
+              </div>
+            </div>
+            <div className='header__button--div'>
+              <Button className='header__button' icon={uploadIcon} alt="upload icon" text="UPLOAD"/>
+            </div>
+            <div className='header__userTablet'>
+                <img src={user} className="header__user" alt="user"/>
+            </div>
+            
+          </nav>
     </header>
     );
 }

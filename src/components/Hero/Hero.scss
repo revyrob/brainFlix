@@ -2,14 +2,27 @@
 @use '../../styles/partials/mixins' as *;
 
 .hero {
-    background-color: $color-dark-sec;
-    height: 85vh;
-    display:flex;
-    flex-direction: column;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    @include tablet {
+        background-color: $color-dark-sec;
+        padding: 0 2rem;
+    }
+    @include desktop {
+        
+        display: flex;
+        justify-content: center;
+        height: 87vh;
+    }
+    
     &__video {
-        height: 80vh;
+        height: 100%;
         width: 100%;
+        margin-bottom: 1.5rem;
+        @include tablet {
+            
+            margin: 0 auto;
+            
+        }
     }
 }

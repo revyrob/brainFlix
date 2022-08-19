@@ -5,83 +5,88 @@
 .mainArticle {
     display: flex;
     flex-direction: column;
-    margin-bottom: 3rem;
+    margin-bottom: 1.25rem;
     color: $color-dark;
-    
+    @include desktop {
+        margin-bottom: 3rem;
+    }
     &__div {
         display: flex;
         flex-direction: row;
         justify-content: space-between;  
         align-items: center;   
-        &--left{
+        &--stats{
             display: flex;
-            width: 30%;
-            justify-content: space-between;
-            align-items: center;
-        }
-        &--right{
-            display: flex;
-            width: 30%;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            width: 40%;
+            justify-content: center;
+            align-items: flex-start;
+            @include desktop {
+                width: 30%;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
     }
     &__title {
         font-weight: 700;
-        font-size: 2.5rem;
-        margin: 2.5rem 0 1rem;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        @include desktop {
+            font-size: 2.5rem;
+            margin: 2.5rem 0 1rem;
+        }
     }
     &__article{
         margin-top: 1rem;
         line-height: 1.5rem;
-        padding-right: 1.5rem;
+        @include desktop {
+            padding-right: 1.5rem;
+        }
     }
     &__infoBar {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        border-top: 2px solid $color-light-sec;
         border-bottom: 2px solid $color-light-sec;
-        // padding-right: 2rem;
         margin-top: 1rem;
         line-height: 1.5rem;
-        padding-right: 1.5rem;
-        &__div{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: baseline;
-            // width: 30%;
-            
+        
+        @include desktop { 
+            border-top: none; 
+            padding-right: 1.5rem;
         }
-        &--author{
-            font-weight: 700;
-            margin: 1rem 0 1rem;
-            font-size: 1rem;
+            &__div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: baseline;       
+            }
+            &--author{
+                font-weight: 700;
+                font-size: 1rem;
+                @include desktop {
+                    margin: 1rem 0 1rem;
+                }
+            }
+            &--date{
+                color: $color-light;
+                font-size: 0.9rem;
+                
+            }
+            //need to adjust
+            &--emoji{
+                color: $color-light;
+                font-size: 0.9rem;
+                display: flex;
+                justify-content: center;
+                margin-left:.4rem;
+                
+            }
+                &--icon{
+                    height: 1.2rem;
+                    width: 1.2rem;
+                }
+            }
         }
-        &--date{
-            color: $color-light;
-            font-size: 0.9rem;
-            
-        }
-        //need to adjust
-        &--views{
-            color: $color-light;
-            font-size: 0.9rem;
-            display: flex;
-            justify-content: center;
-            margin-left:.4rem;
-           
-        }
-        //need to adjust
-        &--likes{
-            color: $color-light;
-            font-size: 0.9rem;
-            display: flex;
-            justify-content: center;
-            margin-left:.4rem;
-        }
-        &--icon{
-            height: 1.2rem;
-        }
-    }
-}
