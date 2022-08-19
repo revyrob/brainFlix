@@ -48,12 +48,14 @@
   width: 100%;
   @include tablet {
     margin: 0;
+    align-items:flex-start;
   }
   @include desktop {
     max-width: $desktop-width;
-    width: 83%;
+    width: 75%;
     flex-direction: row;
     margin: 0 auto; //same as the other items left of nav bar
+    align-items: center;
   }
 }
 
@@ -63,6 +65,9 @@
   flex-direction: column;
   @include tablet {
     margin: 0 2rem;
+  }
+  @include desktop {
+    margin: 0 auto;
   }
 }
 

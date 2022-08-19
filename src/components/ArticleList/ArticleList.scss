@@ -6,6 +6,9 @@
     border-left: 2px solid $color-light-sec;
     padding: 1rem;
     color: $color-light;
+    @include tablet {
+        border: none;
+    }
     @include desktop {
         padding-left: 1.5rem;
         padding-top: 2rem;
