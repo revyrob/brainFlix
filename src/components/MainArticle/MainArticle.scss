@@ -21,10 +21,10 @@
             width: 40%;
             justify-content: center;
             align-items: flex-start;
-            @include desktop {
+            @include tablet {
                 flex-direction: row;
             }
-            @include desktop {
+            @include tablet {
                 width: 30%;
                 justify-content: space-between;
                 align-items: center;
@@ -35,15 +35,15 @@
         font-weight: 700;
         font-size: 1.5rem;
         line-height: 2.25rem;
-        @include desktop {
-            font-size: 2.5rem;
+        @include tablet {
+            font-size: 2.25rem;
             margin: 2.5rem 0 1rem;
         }
     }
     &__article{
         margin-top: 1rem;
         line-height: 1.5rem;
-        @include desktop {
+        @include tablet {
             padding-right: 1.5rem;
         }
     }
@@ -55,8 +55,7 @@
         border-bottom: 2px solid $color-light-sec;
         margin-top: 1rem;
         line-height: 1.5rem;
-        
-        @include desktop { 
+        @include tablet { 
             border-top: none; 
             padding-right: 1.5rem;
         }

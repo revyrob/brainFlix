@@ -1,28 +1,11 @@
-// @use '../../styles/partials/reset' as *;
-// @use '../../styles/partials/variables' as *;
-// @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/reset' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 
-// .button {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     border: none;
-//     background-color: $color-dark2;
-//     color: $color-accent;
-//     border-radius: 5px;
-//     flex-wrap: wrap;
-//     width:95vw;
-//     padding: .5rem;
-//     @include desktop {
-//         // display: flex;
-//         // justify-content: left;
-//         // align-items: center;
-//         width:10rem;
-//         flex-wrap: wrap;
-//     }
-//     &--icon {
-//         height: 1.5rem;
-//         padding-right: 1.5rem;
-//     }
-    
-// }
+.button-icon {
+    padding-right: 30vw;
+    @include tablet {
+        padding-right: 5vw;
+    }
+}
+

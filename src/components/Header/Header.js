@@ -4,7 +4,7 @@ import logoIcon from '../../assets/Logo/BrainFlix-logo.svg';
 import uploadIcon from '../../assets/Icons/upload.svg';
 import InputBar from '../InputBar/InputBar';
 import searchIcon from '../../assets/Icons/search.svg'
-import user from '../../assets/Images/Mohan-muruge.jpg';
+
 
 function Header () {
     return (
@@ -15,14 +15,14 @@ function Header () {
               <InputBar className='header__search' icon={searchIcon} placeholder="Search" alt="search icon" name="search"/>
               
               <div className='header__userMobile'>
-                <img src={user} className="header__user" alt="user"/>
+                <div className="header__user"></div>
               </div>
             </div>
             <div className='header__button--div'>
               <Button className='header__button' icon={uploadIcon} alt="upload icon" text="UPLOAD"/>
             </div>
             <div className='header__userTablet'>
-                <img src={user} className="header__user" alt="user"/>
+                <div className="header__user" ></div>
             </div>
             
           </nav>

@@ -6,13 +6,13 @@ import commentIcon from '../../assets/Icons/add_comment.svg';
 
 
 
-function AddCommentForm() {
+function CommentInput() {
     
     return (
         <div className='commentArea__wrapper--mobile'>
         
         <div className='commentArea__user--div'>
-        <img src={user} className="commentArea__user" alt="user"/>
+        <div className="commentArea__user"></div>
         </div>
         <div className='commentArea__wrapper--input'>
         <h2 className='commentArea__title'>
@@ -28,4 +28,4 @@ function AddCommentForm() {
         
         )
     }
-    export default AddCommentForm;
+    export default CommentInput;

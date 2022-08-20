@@ -16,10 +16,12 @@
         &--tablet {
             display: none;
             @include tablet {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
                 height: 4rem;
                 display: flex;
-                align-items: flex-end;
-                justify-content: left;
+                
             }
         }
         @include desktop {
@@ -58,6 +60,7 @@
         height: 2.5rem;
         width: 2.5rem;
         background-size: cover;//same as the other items left of nav bar
+        background-image: url('../../assets/Images/Mohan-muruge.jpg');
         &--div {
             border: none;
         }
@@ -77,6 +80,7 @@
         border: 1px solid $color-light-sec;
         border-radius: 5px;
         height: 6rem;
+        margin-bottom: 1rem;
         @include tablet {
             height: 2.5rem;
         }
