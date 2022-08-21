@@ -1,8 +1,7 @@
 import './CommentArea.scss';
 import Comment from '../Comment/Comment';
-import CommentInput from '../CommentInput/CommentInput';
-import CommentInputTablet from '../CommentInput/CommentInputTablet';
-
+import FormFieldTablet from '../FormField/FormFieldTablet';
+import FormField from '../FormField/FormField';
 
 
 function CommentArea({item}) {
@@ -12,8 +11,8 @@ function CommentArea({item}) {
         <p className='commentArea__numberComments'>
         {item.comments.length} Comments
         </p>
-        <CommentInput/>
-        <CommentInputTablet/>
+        <FormField className="mobile"/>
+        <FormFieldTablet className="tablet"/>
 
         {item.comments.map((user, index) =>
             <Comment

@@ -2,10 +2,23 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.button-icon {
-    padding-right: 30vw;
-    @include tablet {
-        padding-right: 5vw;
+button {
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    background-color: $color-dark2;
+    color: $color-accent;
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: none;
+    &:hover{
+        background-color: $color-dark2-sec;
     }
+}
+.button-icon {
+    margin-right: auto;
+}
+.button-text {
+  margin-right: auto;
 }
 

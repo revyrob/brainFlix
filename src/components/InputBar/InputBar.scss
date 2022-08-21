@@ -2,30 +2,12 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-// .inputBar{
-//     height: 2.5rem;
-//     // width: 20rem;
-//     border: 1px solid $color-light-sec;
-//     border-radius: 5px;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: left;
-//     padding-left: 1rem;
-//     &__icon {
-//         color:$color-light;
-//     }
-//     &__input {
-//         outline: none; 
-//         width:100%;
-//     }
-// }
-//no border on search bar input and when active/focus
 .inputBar {
     &__icon {
         color:$color-light;
     }
     &__input {
+        padding-top: .5rem;
         outline: none; 
         width:100%;
     }
@@ -40,27 +22,3 @@ input {
         outline: none; 
     }
 }
-
-
-// .inputBar{
-//     height: 6rem;
-//     border: 1px solid $color-light-sec;
-//     border-radius: 5px;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: flex-start;
-//     justify-content: flex-start;
-//     @include desktop {
-//         height: 2.5rem;
-//         align-items: center;
-//         justify-content: left;
-//         padding-left: 1rem;
-//     }
-//     &__icon {
-//         color:$color-light;
-//     }
-//     &__input {
-//         outline: none; 
-//         width:100%;
-//     }
-// }

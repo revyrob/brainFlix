@@ -51,7 +51,7 @@
   }
   @include desktop {
     max-width: $desktop-width;
-    width: 75%;
+    width: 80%;
     flex-direction: row;
     margin: 0 auto; //same as the other items left of nav bar
     align-items: center;

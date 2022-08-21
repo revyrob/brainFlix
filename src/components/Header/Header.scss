@@ -75,18 +75,15 @@
         }
     }
     &__button {
-        display: flex;
-        height: 2.5rem;
-        width: 90vw;
-        align-items: center;
-        justify-content: left;
-        border: none;
-        background-color: $color-dark2;
-        color: $color-accent;
-        padding: .5rem;
-        border-radius: 5px;
+        // display: flex;
+        // height: 2.5rem;
+        width: 95vw;
+        // align-items: center;
+        // justify-content: left;
+        // border: none;
+        // padding: .5rem;
         @include tablet {
-            justify-content: left;
+            // justify-content: left;
             width: 20vw;
         }
         @include desktop {
