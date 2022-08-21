@@ -1,6 +1,6 @@
 import './Button.scss';
 
-
+//general button function that has an icon on the left and text in the center
 function Button ({icon, alt, text, className}) {
     return(
         <button className={className}>

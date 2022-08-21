@@ -11,6 +11,9 @@ function CommentArea({item}) {
         <p className='commentArea__numberComments'>
         {item.comments.length} Comments
         </p>
+        <h2 className='commentArea__title'>
+        Join the Conversation
+        </h2>
         <FormField className="mobile"/>
         <FormFieldTablet className="tablet"/>
 

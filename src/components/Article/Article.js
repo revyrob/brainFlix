@@ -1,6 +1,6 @@
 import './Article.scss';
 
-
+//use the onclick function in the article component and not ArticleList because the articles are the onclick events
 function Article({image, title, channel, handler, id}) {
     return (
         <article onClick={() => handler(id)} className='article'>

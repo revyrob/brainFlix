@@ -54,8 +54,8 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        border-top: 2px solid $color-light-sec;
-        border-bottom: 2px solid $color-light-sec;
+        border-top: 1px solid $color-light-sec;
+        border-bottom: 1px solid $color-light-sec;
         margin-top: 1rem;
         line-height: 1.5rem;
         @include tablet { 
@@ -81,7 +81,6 @@
                 font-size: 0.9rem;
                 
             }
-            //need to adjust
             &--emoji{
                 color: $color-light;
                 font-size: 0.9rem;

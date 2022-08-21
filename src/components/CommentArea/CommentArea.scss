@@ -33,5 +33,17 @@
             margin-bottom:1rem;
         }
     }
+    &__title {
+        text-transform: uppercase;
+        color: $color-light;
+        margin-bottom: .5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: 3.5rem;
+        @include tablet {
+            margin-left: 9%;
+           }
+    
+    }
    
 }

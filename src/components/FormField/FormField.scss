@@ -4,11 +4,14 @@
 
 .formField {
     width:100%;
+    
     &__wrapper {
         &--mobile {
             display: flex;
             justify-content: center;
             align-items: left;
+            border-bottom: 1px solid $color-light-sec;
+            padding-bottom: 1rem;
             @include tablet {
                 display: none;
             }
@@ -17,20 +20,20 @@
             display: none;
             @include tablet {
                 display: flex;
-                align-items: center;
-                justify-content: flex-start;
+                align-items: flex-start;
+                justify-content: space-between;
                 height: 4rem;
                 display: flex;
-                margin-top: 2rem;
-                
-            }
+                border-bottom: 1px solid $color-light-sec;            }
         }
-        @include desktop {
-            width: 65vw;
-        }
+       
         &--input{
             width: 80vw;
             margin: 0 1rem;
+            @include tablet {
+                width: 57vw;
+                margin: 0;
+            }
             @include desktop {
                 margin: 0 1rem;//push the side from the userPic and the button
                 width: 65vw;
@@ -41,6 +44,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-end; 
+            width: 65vw;
         }
     }
     &__action {
@@ -53,8 +57,6 @@
         }
     }
     
-    //
-    //fix the user so it had rounded sides
     &__user {
         margin: 0;
         border-radius: 50%;
@@ -66,20 +68,13 @@
             border: none;
         }
     }
-    &__title {
-        text-transform: uppercase;
-        color: $color-light;
-        margin-bottom: .5rem;
-        font-size: 1rem;
-        font-weight: 500;
-    }
     &__input{
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
         border: 1px solid $color-light-sec;
-        border-radius: 5px;
+        border-radius: 4px;
         height: 6rem;
         margin-bottom: 1rem;
         &:focus {
@@ -90,14 +85,14 @@
         }
         @include tablet {
             height: 2.5rem;
+            // margin-left: 1rem;
         }
         @include desktop {
-            // height: 2.5rem;
             align-items: center;
             justify-content: left;
             padding-left: 1rem;
             width: 100%;
-            
+            margin:0;
         }
         &--input{
             width: 90%;
@@ -112,12 +107,29 @@
         }
     }
 }
+textarea{
+    padding-left: 1rem;
+    padding-top:1rem;
+    resize: none;
+    &:focus {
+        border: 2px solid $color-dark2;
+    }
+    &:required {
+        border: 2px solid red;
+    }
+    &::placeholder {
+        color: $color-dark;
+        text-align:left;
+        align-content: flex-start;
+        font-family: $font-primary;
+    }
+    
+}
 input {
-    // border: 1px solid $color-light-sec;
     padding-left: 1rem;
     &::placeholder {
         color: $color-dark;
+        text-align:left;
+        align-content: flex-start;        
     }
-    
-   
 }

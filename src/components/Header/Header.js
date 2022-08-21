@@ -2,8 +2,9 @@ import './Header.scss';
 import Button from '../Button/Button';
 import logoIcon from '../../assets/Logo/BrainFlix-logo.svg';
 import uploadIcon from '../../assets/Icons/upload.svg';
-import InputBar from '../InputBar/InputBar';
+import SearchBar from '../SearchBar/SearchBar';
 import searchIcon from '../../assets/Icons/search.svg'
+
 
 
 function Header () {
@@ -12,8 +13,7 @@ function Header () {
         <img src={logoIcon} className="header__logo" alt="Brainflix logo" />
           <nav className="header__nav">
             <div className='header__search--div'>
-              <InputBar className='header__search' icon={searchIcon} placeholder="Search" alt="search icon" name="search"/>
-              
+              <SearchBar className='header__search' icon={searchIcon} placeholder="Search" alt="search icon" name="search"/>
               <div className='header__userMobile'>
                 <div className="header__user"></div>
               </div>

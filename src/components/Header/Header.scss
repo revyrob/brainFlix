@@ -9,7 +9,7 @@
     align-items: center;
     padding: 1rem 0;
     height: 35vh;
-    min-height: 10rem;
+    min-height: 12rem;
     width: 100vw;
    
     @include tablet {
@@ -18,7 +18,7 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100vw;
-        padding:0 2rem;
+        padding:0 3rem;
     }
     @include desktop {
         max-width: $desktop-width;
@@ -45,21 +45,25 @@
         height: 2.5rem;
         width: 75vw;
         border: 1px solid $color-light-sec;
-        border-radius: 5px;
+        border-radius: 4px;
         align-items: center;
         justify-content: left;
         padding-left: 1rem;
+        &:hover {
+            border: 2px solid $color-dark2;
+        }
+        &:required {
+            border: 2px solid red;
+        }
         @include tablet {
             width: 90%;
             margin: 0;
-            // margin: 0 2rem; //same as the other items left of nav bar
         }
         &--div {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             margin-bottom: 1rem;
-            // width: 95vw;
             @include tablet {
                 margin:0;
                 width: 40vw;
@@ -75,15 +79,8 @@
         }
     }
     &__button {
-        // display: flex;
-        // height: 2.5rem;
         width: 95vw;
-        // align-items: center;
-        // justify-content: left;
-        // border: none;
-        // padding: .5rem;
         @include tablet {
-            // justify-content: left;
             width: 20vw;
         }
         @include desktop {

@@ -1,6 +1,6 @@
-import './InputBar.scss';
+import './SearchBar.scss';
 
-function InputBar({placeholder, icon, alt, name, className}) {
+function SearchBar({placeholder, icon, alt, name, className}) {
  return (
     <div className={className}>
         
@@ -10,4 +10,4 @@ function InputBar({placeholder, icon, alt, name, className}) {
     </div>
  )
 }
-export default InputBar;
+export default SearchBar;
