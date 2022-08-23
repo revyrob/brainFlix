@@ -1,0 +1,35 @@
+@use '../../styles/partials/reset' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    border-top: 1px solid $color-light-sec;
+    margin: 0 1rem;
+    &__title {
+        font-size: 2rem;
+        color: $color-dark;
+        padding: 2rem 0;
+        
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        color: $color-light;
+        font-size: 1rem;
+        padding-bottom: .5rem;
+    }
+    &__div {
+        display: flex;
+        justify-content: center;
+    }
+    &__img {
+        background-color: $color-light-sec;
+        height: 55vw;
+        width: 100%;
+        border-radius: 4px;
+        align-items: center;
+    }
+}

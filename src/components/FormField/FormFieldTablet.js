@@ -12,9 +12,6 @@ function formFieldTablet() {
         <div className="formField__user"></div>
         </div>
         <div className='formField__wrapper--input'>
-        {/* <h2 className='formField__title'>
-        Join the Conversation
-        </h2> */}
         <div className='formField__action'>
         <input type="text" placeholder='Add a new comment' name='comment' className='formField__input'></input>
         </div>

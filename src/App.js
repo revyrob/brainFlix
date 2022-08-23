@@ -1,43 +1,21 @@
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-//videos for hero
-import initialFullVideos from './Data/video-details.json';
-import MainArticle from './components/MainArticle/MainArticle';
-import ArticleList from './components/ArticleList/ArticleList';
-import CommentArea from './components/CommentArea/CommentArea';
+import HomePage from './Pages/HomePage';
+import UploadPage from './Pages/UploadPage';
+
 
 function App() {
-  //useState for videos in side bar
-  const [videos] = useState(initialFullVideos);
-
-  //useState for video in main bar
-  const [mainVideo, setMainVideo] = useState(initialFullVideos[0]);
-
-  //handler for selected article
-  const handleVideoSelected = (id) =>{
-    const foundVideo = videos.find(vid => vid.id === id);
-    setMainVideo(foundVideo);
-  }
   
   return (
-    <>
+    <BrowserRouter>
     <Header />
-    <Hero item={mainVideo}/>
-    
-    <section className='main'>
-      <section className='leftMain'>
-    <MainArticle item={mainVideo}/>
-    <CommentArea item={mainVideo}/>
-    
-    </section>
-    <ArticleList 
-    item={videos}
-    itemMain={mainVideo}
-    handler={handleVideoSelected}/>
-    </section>
-    </>
+    <Routes>
+    <Route path="/" element={<HomePage/>} />
+    <Route path="/uploadPage" element={<UploadPage />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,23 @@
+@use '../../styles/partials/reset' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.uploadForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    &__label{
+        color: $color-light;
+        text-transform: uppercase;
+
+    }
+    &__input{
+        color: $color-dark;
+
+    }
+    &__textarea{
+        height: 3rem;
+
+    }
+}
