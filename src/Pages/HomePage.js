@@ -15,16 +15,19 @@ import { useParams } from 'react-router-dom';
 *it puts the video main and the key in the url
 */
 function HomePage() {
-    
+    //api with apiKey
+    const urlVids = `https://project-2-api.herokuapp.com/videos/`;
+    const apiKey = `?api_key=be97841f-2e0f-41ab-8584-cf3c3e4b26a9/`;
+    const initialId = `84e96018-4022-434e-80bf-000ce4cd12b8`;
+
     //useState for video in main bar
-    const [mainVideo, setMainVideo] = useState(initialVid[0]);
+    //why doesn't this work?
+    const [mainVideo, setMainVideo] = useState(`${urlVids}${initialId}${apiKey}`);
     
     //use Params for videoId and console log to see what the useParams are
     const {videoId} = useParams();
     
-    //api with apiKey
-    const urlVids = `https://project-2-api.herokuapp.com/videos/`;
-    const apiKey = `?api_key=be97841f-2e0f-41ab-8584-cf3c3e4b26a9/`;
+    
     useEffect(() => {
         //i get the videoId
         console.log('videoId', videoId);

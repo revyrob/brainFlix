@@ -6,12 +6,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    border-top: 1px solid $color-light-sec;
     margin: 0 1rem;
+    @include tablet{
+        margin: 0 3rem;
+    }
     &__title {
         font-size: 2rem;
         color: $color-dark;
         padding: 2rem 0;
+        @include tablet {
+            font-weight: 700;
+        }
         
     }
     &__subtitle {
@@ -30,5 +35,12 @@
         width: 100%;
         border-radius: 4px;
         align-items: center;
+    }
+}
+.greyLine{
+    border-top: 1px solid $color-light-sec;
+    margin: 0;
+    @include tablet{
+        margin: 0 3rem;
     }
 }

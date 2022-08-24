@@ -1,16 +1,12 @@
 import UploadVid from "../components/UploadVid/UploadVid";
 import UploadForm from "../components/UploadForm/UploadForm";
 
-import './UploadPage.scss';
-
-
 function UploadPage() {
     
         return (
-            <section>
+            <section className="upload">
             <UploadVid />
-           
-            <UploadForm />
+            <UploadForm/>
             </section>
             );
         }

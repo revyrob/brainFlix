@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 1rem 0;
+    margin: 1rem 1rem 0;
     &__label{
         color: $color-light;
         text-transform: uppercase;
@@ -69,18 +69,20 @@
     }
     &__btn {
         width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         &--publish{
-            margin-bottom: 2rem;
+            @extend .uploadForm__btn;
         }
         &--cancel{
+            @extend .uploadForm__btn;
             background-color: $color-accent;
             color: $color-dark2;
             padding-left: 24px;
         }
     }
     
-}
+} 
+
 
 
 
