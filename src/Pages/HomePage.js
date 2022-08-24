@@ -23,14 +23,14 @@ function HomePage() {
     const {videoId} = useParams();
     
     //api with apiKey
-    const urlVids = `https://project-2-api.herokuapp.com/videos?api_key=be97841f-2e0f-41ab-8584-cf3c3e4b26a9/videos/`;
-   
+    const urlVids = `https://project-2-api.herokuapp.com/videos/`;
+    const apiKey = `?api_key=be97841f-2e0f-41ab-8584-cf3c3e4b26a9/`;
     useEffect(() => {
         //i get the videoId
         console.log('videoId', videoId);
         if(videoId !== undefined){
                     axios
-                    .get(`${urlVids}${videoId}`)
+                    .get(`${urlVids}${videoId}${apiKey}`)
                     .then((response) => {
                         setMainVideo(response.data);
                         console.log(response.data);
@@ -57,6 +57,7 @@ function HomePage() {
         <ArticleList 
         // item={videos}
         url={urlVids}
+        api={apiKey}
         itemMain={mainVideo}
         />
     </section>

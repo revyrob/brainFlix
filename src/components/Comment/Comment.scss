@@ -9,6 +9,7 @@
     border-bottom: 1px solid $color-light-sec;
     padding: 1rem 0;
     font-size: 0.9rem;
+    color: $color-dark-sec;
     @include desktop {
         padding: 2rem 1rem 2rem 0;
         font-size: 1rem;

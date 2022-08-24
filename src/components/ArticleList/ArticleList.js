@@ -7,13 +7,13 @@ import { useEffect, useState } from 'react';
 
 //articles are generated here through the json file provided
 //they are filter with comparing the list and which one is being shown in the mainArticle
-function ArticleList({itemMain, url}) {
+function ArticleList({itemMain, url, api}) {
 
     const [videos, setVideos] = useState(null);
     
     useEffect(() =>{
         axios
-        .get(url)
+        .get(`${url}${api}`)
         .then((response) => {
         setVideos(response.data);
         console.log(response);
