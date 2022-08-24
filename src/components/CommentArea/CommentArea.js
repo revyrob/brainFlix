@@ -1,8 +1,7 @@
 import './CommentArea.scss';
 import Comment from '../Comment/Comment';
-import FormFieldTablet from '../FormField/FormFieldTablet';
+import FormFieldTablet from '../FormFieldTablet.js/FormFieldTablet';
 import FormField from '../FormField/FormField';
-import { Link } from 'react-router-dom';
 
 function CommentArea({item}) {
    

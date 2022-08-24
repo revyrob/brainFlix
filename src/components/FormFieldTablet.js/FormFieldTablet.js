@@ -1,10 +1,10 @@
-import './FormField.scss';
+import '../FormField/FormField'; //uses the same scss file as FormField.scss because they both have the same styling but different layouts
 import Button from '../Button/Button';
 import commentIcon from '../../assets/Icons/add_comment.svg';
 
 //form field for tablet/desktop since the input and button are in a different order compared to the 
 //mobile
-function formFieldTablet() {
+function FormFieldTablet() {
     
     return (
         <form method="post" className='formField__wrapper--tablet'>
@@ -22,4 +22,4 @@ function formFieldTablet() {
         
         )
     }
-    export default formFieldTablet;
+    export default FormFieldTablet;

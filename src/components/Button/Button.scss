@@ -11,6 +11,7 @@ button {
     border-radius: 5px;
     padding: 0.5rem;
     border: none;
+    padding-right: 24px;
     &:hover{
         background-color: $color-dark2-sec;
     }
@@ -21,4 +22,5 @@ button {
 .button-text {
   margin-right: auto;
 }
+
 

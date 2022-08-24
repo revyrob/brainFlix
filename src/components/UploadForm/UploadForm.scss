@@ -1,4 +1,3 @@
-@use '../../styles/partials/reset' as *;
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
@@ -6,18 +5,82 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    margin: 1rem 0;
     &__label{
         color: $color-light;
         text-transform: uppercase;
-
-    }
-    &__input{
-        color: $color-dark;
-
+        font-size: .9rem;
+        
     }
     &__textarea{
-        height: 3rem;
-
+        color: $color-dark-sec;
+        font-family: $font-primary;
+        width: 100%;
+        border: 1px solid $color-light-sec;
+        border-radius: 4px;
+        height: 6rem;
+        margin-bottom: 1rem;
+        margin-top: .25rem;
+        &:focus {
+            border: 2px solid $color-dark2;
+        }
+        &:required {
+            border: 2px solid red;
+        }
+        @include tablet {
+            height: 2.5rem;
+        }
+        @include desktop {
+            align-items: center;
+            justify-content: left;
+            padding-left: 1rem;
+            width: 100%;
+            margin:0;
+        }
+        
     }
+    &__input{
+        color: $color-dark-sec;
+        font-family: $font-primary;
+        width: 100%;
+        border: 1px solid $color-light-sec;
+        border-radius: 4px;
+        height: 2.5rem;
+        margin-bottom: 1.5rem;
+        margin-top: .25rem;
+        &:focus {
+            border: 2px solid $color-dark2;
+        }
+        &:required {
+            border: 2px solid red;
+        }
+        @include tablet {
+            height: 2.5rem;
+            
+        }
+        @include desktop {
+            align-items: center;
+            justify-content: left;
+            padding-left: 1rem;
+            width: 100%;
+            margin:0;
+        }
+        
+    }
+    &__btn {
+        width: 100%;
+        margin-bottom: 2rem;
+        &--publish{
+            margin-bottom: 2rem;
+        }
+        &--cancel{
+            background-color: $color-accent;
+            color: $color-dark2;
+            padding-left: 24px;
+        }
+    }
+    
 }
+
+
+
