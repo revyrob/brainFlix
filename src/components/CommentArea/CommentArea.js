@@ -2,11 +2,13 @@ import './CommentArea.scss';
 import Comment from '../Comment/Comment';
 import FormFieldTablet from '../FormField/FormFieldTablet';
 import FormField from '../FormField/FormField';
-
+import { Link } from 'react-router-dom';
 
 function CommentArea({item}) {
-    
+   
     return (
+        
+
         <section className='commentArea'>
         <p className='commentArea__numberComments'>
         {item.comments.length} Comments
@@ -16,7 +18,7 @@ function CommentArea({item}) {
         </h2>
         <FormField className="mobile"/>
         <FormFieldTablet className="tablet"/>
-
+        
         {item.comments.map((user, index) =>
             <Comment
             key = {index}
@@ -26,8 +28,8 @@ function CommentArea({item}) {
             timestamp = {user.timestamp}
             />
             )}
+             
             </section>
-            
             )
         }
         export default CommentArea;

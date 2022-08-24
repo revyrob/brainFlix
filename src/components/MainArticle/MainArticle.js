@@ -1,10 +1,13 @@
 import './MainArticle.scss';
 import views from '../../assets/Icons/views.svg';
 import likes from '../../assets/Icons/likes.svg';
+import {Link} from 'react-router-dom';
 
 function MainArticle({item}) {
     const newDate = new Date(item.timestamp).toLocaleDateString();
+
     return (
+        
         <section className='mainArticle'>
         <h1 className='mainArticle__title'>{item.title}</h1>
         <div className='mainArticle__infoBar'>

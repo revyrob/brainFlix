@@ -7,18 +7,19 @@ import { useEffect, useState } from 'react';
 
 //articles are generated here through the json file provided
 //they are filter with comparing the list and which one is being shown in the mainArticle
-function ArticleList({itemMain}) {
+function ArticleList({itemMain, url}) {
 
     const [videos, setVideos] = useState(null);
     
     useEffect(() =>{
         axios
-        .get('https://project-2-api.herokuapp.com/videos?api_key=be97841f-2e0f-41ab-8584-cf3c3e4b26a9/videos')
+        .get(url)
         .then((response) => {
         setVideos(response.data);
+        console.log(response);
     })
     .catch((err) => console.log(err));
-}, []);
+}, [url]);
 
     useEffect(() => {
         setVideos();
