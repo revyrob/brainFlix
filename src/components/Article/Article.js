@@ -1,9 +1,11 @@
 import './Article.scss';
+import {Link} from 'react-router-dom';
 
 //use the onclick function in the article component and not ArticleList because the articles are the onclick events
-function Article({image, title, channel, handler, id}) {
+function Article({image, title, channel, id}) {
     return (
-        <article onClick={() => handler(id)} className='article'>
+        <Link to={`/HomePage/${id}`}>
+        <article className='article'>
         <div className='article__img--div'>
         <img className='article__img' src={image} alt={title} />
         </div>
@@ -12,6 +14,7 @@ function Article({image, title, channel, handler, id}) {
         <p className='article__infoBar--author'>{channel}</p>
         </div>
         </article>
+        </Link>
         
         )
     }
