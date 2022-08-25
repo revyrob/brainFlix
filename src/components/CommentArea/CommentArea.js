@@ -18,9 +18,9 @@ function CommentArea({item}) {
         <FormField className="mobile"/>
         <FormFieldTablet className="tablet"/>
         
-        {item.comments.map((user) =>
+        {item.comments.map((user, index) =>
             <Comment
-            key = {user.id}
+            key = {index}
             name = {user.name}
             comment = {user.comment}
             likes = {user.likes}

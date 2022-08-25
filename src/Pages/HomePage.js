@@ -1,70 +1,79 @@
 import { useState, useEffect } from 'react';
-// import {Link, useParams} from 'react-router-dom';
 import axios from 'axios';
 import Hero from '../components/Hero/Hero';
-//videos for hero
-import initialVid from '../Data/video-details.json';
 import MainArticle from '../components/MainArticle/MainArticle';
 import ArticleList from '../components/ArticleList/ArticleList';
 import CommentArea from '../components/CommentArea/CommentArea';
 import { useParams } from 'react-router-dom';
 
-/*
-*On the homepage you have a click handler with the list videos
-*where when you click on the list videos it uses a Link
-*it puts the video main and the key in the url
-*https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=be97841f-2e0f-41ab-8584-cf3c3e4b26a9/
-*/
 function HomePage() {
     //useState for video in main bar
-    const [mainVideo, setMainVideo] = useState(initialVid[0]);
+    const [videoList, setVideoList] = useState(null);
+    const [mainVideo, setMainVideo] = useState();
     
-    //api with apiKey
+    //variables for key and url, can store this in another place in the future
     const urlVids = `https://project-2-api.herokuapp.com/videos/`;
     const apiKey = `?api_key=be97841f-2e0f-41ab-8584-cf3c3e4b26a9/`;
-
-    //use Params for videoId and console log to see what the useParams are
+    
     const {videoId} = useParams();
     
-    //switch the video in the video list to the video main
+    //get the list for the videos
+    useEffect(() =>{
+        axios
+        .get(`${urlVids}${apiKey}`)
+        .then((response) => {
+            setVideoList(response.data);
+            //make an if statement here if time
+            //if(videoId === undefined) {
+            //     axios
+            //     .get(`${urlVids}84e96018-4022-434e-80bf-000ce4cd12b8${apiKey}`)
+            //     .then((response) => {
+            //     setMainVideo(response.data);
+            // })
+            //}
+        })
+        .catch((err) => console.log(err));
+    }, []);
+    
+    // switch the video in the video list to the video main
     useEffect(() => {
-        //i get the videoId
-        console.log('videoId', videoId);
         if(videoId !== undefined){
-                    axios
-                    .get(`${urlVids}${videoId}${apiKey}`)
-                    .then((response) => {
-                        setMainVideo(response.data);
-                        console.log(response.data);
-                    })
-                    .catch((err) => console.log(err));
-                };
-            }, [videoId]);
-   
-    //do I need to go to each page and add the <Link> or can I do
-    //it in the return around all the factors?
-    //it isn't working since I am only still grabbing the small
-    //json and there are no comments on it therefore 
-    //no comment length
+            axios
+            .get(`${urlVids}${videoId}${apiKey}`)
+            .then((response) => {
+                setMainVideo(response.data);
+                console.log(response.data)
+            })
+            .catch((err) => console.log(err));
+            //else statement to currently hardcode the videoId since this useEffect block is running bfore the setVideoList
+            //can try to solve after reponsive design is complete
+        } else {
+            axios
+            .get(`${urlVids}84e96018-4022-434e-80bf-000ce4cd12b8${apiKey}`)
+            .then((response) => {
+                setMainVideo(response.data);
+            })
+            .catch((err) => console.log(err));
+        }
+    }, [videoId]);
+
+    //need to have the && statements for each item since this code will run before the useEffects and if they
+    //run first they will not have the requirements for the states, therefore there has to be the truthy statements
+    //so the code runs properly
     return (
         <>
-         
-        <Hero item={mainVideo}/>
+        {mainVideo && <Hero item={mainVideo}/>}
         <section className='main'>
         <section className='leftMain'>
-        <MainArticle item={mainVideo}/>
-        <CommentArea item={mainVideo}/>
+        {mainVideo && <MainArticle item={mainVideo}/>}
+        
+        {mainVideo &&<CommentArea item={mainVideo}/>}
         
         </section>
-        <ArticleList 
-        // item={videos}
-        url={urlVids}
-        api={apiKey}
-        itemMain={mainVideo}
-        />
-    </section>
-    </>
-    );
-}
-
-export default HomePage;
+        {mainVideo && <ArticleList itemMain={mainVideo} videoList={videoList}/>}
+        </section>
+        </>
+        );
+    }
+    
+    export default HomePage;
