@@ -73,6 +73,20 @@
   }
 }
 
+.uploadPage {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+  }
+  &--div {
+    display: flex;
+    
+  }
+}
+
 body{
   font-family: $font-primary;
   

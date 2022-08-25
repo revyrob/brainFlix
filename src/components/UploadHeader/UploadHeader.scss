@@ -1,7 +1,7 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.upload{
+.upLoadHeader{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,26 +34,4 @@
         }
         
     }
-    &__img {
-        background-color: $color-light-sec;
-        height: 55vw;
-        width: 100%;
-        border-radius: 4px;
-        align-items: center;
-        @include tablet {
-            width: 50%;
-            height: 23vw;
-        }
-        @include desktop {
-            width: 100%;
-        }
-    }
-}
-.greyLine{
-    border-top: 1px solid $color-light-sec;
-    margin: 0;
-    @include desktop {
-        border-top: none;
-    }
-    
 }

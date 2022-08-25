@@ -15,10 +15,12 @@ function UploadForm () {
         <label className='uploadForm__label'>Add a video description
         <textarea type="text" placeholder='Add a description to your video' name='description' className='uploadForm__textarea'></textarea>
         </label>
+        <div className='uploadForm__btn--div'>
         <Link to={`/HomePage/:videoId`}> 
         <Button className="uploadForm__btn--publish" icon={publish} alt="upload" text="PUBLISH" type="submit"/>
         </Link>
         <Button className="uploadForm__btn--cancel" text="CANCEL" type="cancel"/>
+        </div>
         </form>
         
         );

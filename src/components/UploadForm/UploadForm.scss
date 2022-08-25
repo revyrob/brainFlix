@@ -6,10 +6,20 @@
     flex-direction: column;
     justify-content: flex-start;
     margin: 1rem 1rem 0;
+    @include desktop {
+        width: 75%;
+    }
     &__label{
         color: $color-light;
         text-transform: uppercase;
         font-size: .9rem;
+        @include tablet {
+            border-bottom: 1px solid $color-light-sec;
+            margin-bottom: 1rem;
+        }
+        @include desktop {
+            border: none;
+        }
         
     }
     &__textarea{
@@ -67,21 +77,47 @@
         }
         
     }
+    
     &__btn {
         width: 100%;
         margin-bottom: 1rem;
         &--publish{
             @extend .uploadForm__btn;
+            @include tablet{
+                width: 11.25rem;
+            }
+           
         }
         &--cancel{
             @extend .uploadForm__btn;
             background-color: $color-accent;
             color: $color-dark2;
             padding-left: 24px;
+            @include tablet {
+                width: 11.25rem;
+            }
+            
+        }
+        &--div {
+            @include tablet {
+                display: flex;
+                flex-direction: row-reverse;
+                width: 50%;
+                margin-left: auto;
+                justify-content: stretch;
+            }
         }
     }
-    
-} 
+}
+.grey-line {
+    display: none;
+    @include tablet {
+        border-bottom: 1px solid $color-light-sec;
+        width: 100%;
+        height: 1px;
+    }
+}
+
 
 
 
