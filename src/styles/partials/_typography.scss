@@ -24,3 +24,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('../../assets/Font/AvenirNextLTPro-Demi.eot');
+    src: url('../../assets/Font/AvenirNextLTPro-Demi.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/Font/AvenirNextLTPro-Demi.woff2') format('woff2'),
+        url('../../assets/Font/AvenirNextLTPro-Demi.woff') format('woff'),
+        url('../../assets/Font/AvenirNextLTPro-Demi.ttf') format('truetype'),
+        url('../../assets/Font/AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

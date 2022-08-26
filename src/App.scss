@@ -74,16 +74,24 @@
 }
 
 .uploadPage {
+  width: 100%;
+  border-top: 1px solid $color-light-sec;
+  
   @include desktop {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     max-width: 1280px;
     width: 90%;
+    // border-bottom: 1px solid $color-light-sec;
+    // padding-bottom: 1rem;
   }
   &--div {
     display: flex;
-    
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+    }
   }
 }
 
@@ -105,4 +113,30 @@ a:hover {
 
 a:active {
   text-decoration: none;
+}
+
+.loader {
+  position: relative;
+  top: 3.125rem;
+  margin: auto;
+  border: 20px solid $color-dark2;
+  border-radius: 50%;
+  border-top: 20px solid $color-dark2-sec;
+  width: 12.5rem;
+  height: 12.5rem;
+  animation: spinner 4s linear infinite;
+}
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.showBtn {
+  display: none;
+  @include desktop {
+    display: flex;
+    border-top: 1px solid $color-light-sec;
+    padding-top: 1rem;
+    
+  }
 }

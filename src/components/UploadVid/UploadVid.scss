@@ -10,21 +10,12 @@
     @include tablet{
         margin: 0 1rem;
     }
-
-    &__title {
-        font-size: 2rem;
-        color: $color-dark;
-        padding: 2rem 0;
-        @include tablet {
-            font-weight: 700;
-        }
-        
-    }
     &__subtitle {
         text-transform: uppercase;
         color: $color-light;
         font-size: .9rem;
         padding-bottom: .5rem;
+        font-weight: 600;
     }
     &__div {
         display: flex;
@@ -36,7 +27,7 @@
     }
     &__img {
         background-color: $color-light-sec;
-        height: 55vw;
+        height: 50vw;
         width: 100%;
         border-radius: 4px;
         align-items: center;
@@ -45,6 +36,7 @@
             height: 23vw;
         }
         @include desktop {
+            height: 20vw;
             width: 100%;
         }
     }

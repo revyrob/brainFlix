@@ -15,8 +15,12 @@
         font-size: 2rem;
         color: $color-dark;
         padding: 2rem 0;
+        font-weight: 600;
         @include tablet {
             font-weight: 700;
+            border-bottom: 1px solid $color-light-sec;
+            padding: 1.5rem 0;
+            margin-bottom: 1.5rem;
         }
         
     }
