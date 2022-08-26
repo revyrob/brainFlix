@@ -3,6 +3,9 @@
 
 .uploadForm {
     margin: 1rem 1rem 0;
+    // @include tablet {
+    //    width:85%;
+    // }
     @include desktop {
         width: 75%;
         height: 100%;
@@ -10,7 +13,7 @@
     &__label{
         color: $color-light;
         text-transform: uppercase;
-        font-size: .9rem;
+        font-size: 0.75rem;
         font-weight: 600;
         @include tablet {
             // border-bottom: 1px solid $color-light-sec;
@@ -26,6 +29,7 @@
     &__textarea{
         color: $color-dark-sec;
         font-family: $font-primary;
+        font-size: 0.8125rem;
         width: 100%;
         border: 1px solid $color-light-sec;
         border-radius: 4px;
@@ -42,6 +46,7 @@
             height: 6rem;
             padding-bottom: 2rem;
             margin-bottom: 1.5rem;
+            font-size: 0.875rem;
         }
         @include desktop {
             align-items: center;
@@ -50,12 +55,13 @@
             width: 100%;
             margin-bottom: 1rem;
             margin-top: 0.25rem;
-            height: 10rem;
+            height: 8rem;
         }   
     }
     &__input{
         color: $color-dark-sec;
         font-family: $font-primary;
+        font-size: 0.8125rem;
         width: 100%;
         border: 1px solid $color-light-sec;
         border-radius: 4px;
@@ -70,6 +76,7 @@
         }
         @include tablet {
             height: 2.5rem;
+            font-size: 0.875rem;
             
         }
         @include desktop {
@@ -79,7 +86,7 @@
             width: 100%;
             margin-bottom: 2rem;
             margin-top: 0.25rem;
-            height: 3.5rem;
+            height: 3rem;
         }
         &__btn {
             @include desktop {

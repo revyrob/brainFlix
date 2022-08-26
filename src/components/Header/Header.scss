@@ -6,11 +6,11 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 0 0;
     height: 35vh;
     min-height: 12rem;
     width: 100vw;
-   
+    
     @include tablet {
         min-height: 4rem;
         height: 12vh;
@@ -42,7 +42,7 @@
     &__search{
         display: flex;
         height: 2.5rem;
-        width: 75vw;
+        width: 78vw;
         border: 1px solid $color-light-sec;
         border-radius: 4px;
         align-items: center;

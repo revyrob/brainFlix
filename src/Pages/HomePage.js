@@ -55,6 +55,7 @@ function HomePage() {
     *toggle between loading
     */
     const [loading, setLoading] = useState(true);
+    
     useEffect(() => {
       // Loading function to load data or 
       // fake it using setTimeout;

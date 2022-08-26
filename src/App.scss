@@ -54,7 +54,6 @@
     width: 85%;
     flex-direction: row;
     margin: 0 auto; //same as the other items left of nav bar
-    align-items: center;
   }
 }
 
@@ -76,6 +75,9 @@
 .uploadPage {
   width: 100%;
   border-top: 1px solid $color-light-sec;
+  @include tablet {
+    padding: 0 2rem;
+  }
   
   @include desktop {
     display: flex;
@@ -89,6 +91,7 @@
   &--div {
     display: flex;
     flex-direction: column;
+
     @include desktop {
       flex-direction: row;
     }
@@ -97,6 +100,10 @@
 
 body{
   font-family: $font-primary;
+  font-size: 0.8125rem; 
+  @include desktop {
+    font-size: 0.875rem;
+  }
   
 }
 a:link {

@@ -13,7 +13,7 @@
     &__subtitle {
         text-transform: uppercase;
         color: $color-light;
-        font-size: .9rem;
+        font-size: 0.75rem;
         padding-bottom: .5rem;
         font-weight: 600;
     }
@@ -36,7 +36,7 @@
             height: 23vw;
         }
         @include desktop {
-            height: 20vw;
+            height: 17vw;
             width: 100%;
         }
     }

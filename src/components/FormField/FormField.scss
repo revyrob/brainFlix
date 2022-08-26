@@ -19,11 +19,12 @@
             display: none;
             @include tablet {
                 display: flex;
+                border-bottom: 1px solid $color-light-sec;
                 align-items: flex-start;
                 justify-content: space-between;
                 height: 4rem;
                 display: flex;
-                border-bottom: 1px solid $color-light-sec;            }
+                           }
         }
        
         &--input{

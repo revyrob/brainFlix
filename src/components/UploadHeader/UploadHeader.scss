@@ -12,14 +12,15 @@
     }
 
     &__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: $color-dark;
         padding: 2rem 0;
-        font-weight: 600;
+        font-weight: 700;
         @include tablet {
             font-weight: 700;
+            font-size: 2.0625rem;
             border-bottom: 1px solid $color-light-sec;
-            padding: 1.5rem 0;
+            padding: 2.5rem 0 1.5rem;
             margin-bottom: 1.5rem;
         }
         
@@ -27,7 +28,7 @@
     &__subtitle {
         text-transform: uppercase;
         color: $color-light;
-        font-size: .9rem;
+        font-size: 0.75rem;
         padding-bottom: .5rem;
     }
     &__div {

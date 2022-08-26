@@ -9,9 +9,13 @@
     padding: 1rem 0;
     font-size: 0.9rem;
     color: $color-dark-sec;
+    font-size: 0.8125rem;
     @include desktop {
         padding: 2rem 1rem 2rem 0;
         font-size: 1rem;
+        font-size: 0.875rem;
+        // border-top: 1px solid $color-light-sec;
+        border-bottom: none;
     }
     
     &__wrapper {
@@ -36,10 +40,12 @@
         justify-content: space-between;
     }
     &__name {
-        font-weight: bold;
+        font-weight: 700;
         margin-bottom: 0.5rem;
     }
     &__date {
         color: $color-light;
+        font-size: 0.8125rem;
     }
+    
 }
