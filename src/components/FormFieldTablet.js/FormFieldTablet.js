@@ -10,23 +10,25 @@ function FormFieldTablet() {
       <div className="formField__user--div">
         <div className="formField__user"></div>
       </div>
-      <div className="formField__wrapper--input">
-        <div className="formField__action">
-          <input
-            type="text"
-            placeholder="Add a new comment"
-            name="comment"
-            className="formField__input"
-          ></input>
+      <div className="formField__div">
+        <div className="formField__wrapper--input">
+          <div className="formField__action">
+            <input
+              type="text"
+              placeholder="Add a new comment"
+              name="comment"
+              className="formField__input"
+            ></input>
+          </div>
         </div>
+        <Button
+          className="formField__btn"
+          icon={commentIcon}
+          alt="comment"
+          text="COMMENT"
+          type="submit"
+        />
       </div>
-      <Button
-        className="formField__btn"
-        icon={commentIcon}
-        alt="comment"
-        text="COMMENT"
-        type="submit"
-      />
     </form>
   );
 }

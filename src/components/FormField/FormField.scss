@@ -32,10 +32,10 @@
             width: 80vw;
             margin: 0 1rem;
             
-            @include tablet {
-                width: 57vw;
-                margin: 0;
-            }
+            // @include tablet {
+            //     width: 57vw;
+            //     margin: 0;
+            // }
             @include desktop {
                 margin: 0 1rem;//push the side from the userPic and the button
                 width: 65vw;
@@ -89,7 +89,7 @@
         }
         @include tablet {
             height: 2.5rem;
-            // margin-left: 1rem;
+
         }
         @include desktop {
             align-items: center;
@@ -103,11 +103,20 @@
         }
     }
     &__btn {
-        @include tablet {
-            width: 20vw;
-        }
+        // @include tablet {
+        //     width: 20vw;
+        // }
         @include desktop {
             margin: 0 1rem;
+        }
+    }
+    &__div {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 4rem;
+            width: 92%;
         }
     }
 }
