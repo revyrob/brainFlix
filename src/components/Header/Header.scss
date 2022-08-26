@@ -52,7 +52,7 @@
         justify-content: left;
         padding-left: 1rem;
         background-color: $color-accent-sec;
-
+        
         &:hover {
             border: 2px solid $color-dark2;
         }
@@ -130,9 +130,9 @@
     }
     &__userTablet {
         display: none;
-                @include tablet {
-                    display: flex;
-                }
+        @include tablet {
+            display: flex;
+        }
     }
     
 }

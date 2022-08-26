@@ -3,23 +3,21 @@ import UploadForm from "../components/UploadForm/UploadForm";
 import UploadHeader from "../components/UploadHeader/UploadHeader";
 import UploadButton from "../components/UploadButton/UploadButton";
 
-
 function UploadPage() {
-    
-    return (
-        <>
-        <section className="uploadPage">
+  return (
+    <>
+      <section className="uploadPage">
         <UploadHeader />
         <div className="uploadPage--div">
-        <UploadVid />
-        <UploadForm/>
+          <UploadVid />
+          <UploadForm />
         </div>
         <div className="showBtn">
-        <UploadButton/>
+          <UploadButton />
         </div>
-        </section>
-        </>
-        );
-    }
-    
-    export default UploadPage;
+      </section>
+    </>
+  );
+}
+
+export default UploadPage;
