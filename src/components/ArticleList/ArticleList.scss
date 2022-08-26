@@ -4,7 +4,6 @@
 .articleList {
     padding: 1rem;
     color: $color-light;
-    justify-content: left;
     @include tablet {
         border: none;
         margin: 0 2rem;
@@ -15,7 +14,7 @@
         padding-top: 2rem;
         border-left: 1px solid $color-light-sec;
         margin: 0;
-        width: 45%;
+        width: 40%;
     }
     &__title {
         padding-bottom: 1rem;

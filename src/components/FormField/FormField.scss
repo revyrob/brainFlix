@@ -24,12 +24,16 @@
                 justify-content: space-between;
                 height: 4rem;
                 display: flex;
-                           }
+            }
+            @include desktop {
+                border-bottom: none;
+            }
         }
        
         &--input{
             width: 80vw;
             margin: 0 1rem;
+            
             @include tablet {
                 width: 57vw;
                 margin: 0;
@@ -77,6 +81,7 @@
         border-radius: 4px;
         height: 6rem;
         margin-bottom: 1rem;
+        background-color: $color-accent-sec;
         &:focus {
             border: 2px solid $color-dark2;
         }
@@ -111,6 +116,7 @@ textarea{
     padding-left: 1rem;
     padding-top:1rem;
     resize: none;
+    background-color: $color-accent-sec;
     &:focus {
         border: 2px solid $color-dark2;
     }

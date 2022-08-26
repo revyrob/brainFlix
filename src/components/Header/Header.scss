@@ -37,6 +37,9 @@
             justify-content: center;
             align-items: center;
         }
+        @include desktop {
+            width: 40vw;
+        }
         
     }
     &__search{
@@ -48,6 +51,8 @@
         align-items: center;
         justify-content: left;
         padding-left: 1rem;
+        background-color: $color-accent-sec;
+
         &:hover {
             border: 2px solid $color-dark2;
         }
@@ -57,6 +62,9 @@
         @include tablet {
             width: 90%;
             margin: 0;
+        }
+        @include desktop {
+            width: 97%;
         }
         &--div {
             display: flex;
@@ -109,6 +117,9 @@
         @include tablet {
             margin: 0 auto;
             margin-left: 2rem;
+        }
+        @include desktop {
+            margin-left: 0;
         }
     }
     &__userMobile {
