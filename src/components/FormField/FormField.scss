@@ -103,9 +103,9 @@
         }
     }
     &__btn {
-        // @include tablet {
-        //     width: 20vw;
-        // }
+        @include tablet {
+            width: 30vw;
+        }
         @include desktop {
             margin: 0 1rem;
         }
