@@ -31,11 +31,6 @@
         &--input{
             width: 80vw;
             margin: 0 1rem;
-            
-            // @include tablet {
-            //     width: 57vw;
-            //     margin: 0;
-            // }
             @include desktop {
                 margin: 0 1rem;//push the side from the userPic and the button
                 width: 65vw;
@@ -84,9 +79,6 @@
         &:focus {
             border: 2px solid $color-dark2;
         }
-        &:required {
-            border: 2px solid red;
-        }
         @include tablet {
             height: 2.5rem;
 
@@ -127,9 +119,6 @@ textarea{
     background-color: $color-accent-sec;
     &:focus {
         border: 2px solid $color-dark2;
-    }
-    &:required {
-        border: 2px solid red;
     }
     &::placeholder {
         color: $color-dark;

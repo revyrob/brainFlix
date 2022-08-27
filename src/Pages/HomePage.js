@@ -35,7 +35,6 @@ function HomePage() {
         .get(`${urlVids}${videoId}${apiKey}`)
         .then((response) => {
           setMainVideo(response.data);
-          console.log(response.data);
         })
         .catch((err) => console.log(err));
       //else statement to currently hardcode the videoId since this useEffect block is running bfore the setVideoList

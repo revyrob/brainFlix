@@ -3,9 +3,6 @@
 
 .uploadForm {
     margin: 1rem 1rem 0;
-    // @include tablet {
-    //    width:85%;
-    // }
     @include desktop {
         width: 75%;
         height: 100%;
@@ -16,7 +13,6 @@
         font-size: 0.75rem;
         font-weight: 600;
         @include tablet {
-            // border-bottom: 1px solid $color-light-sec;
             margin-bottom: 1rem;
         }
         @include desktop {
@@ -125,8 +121,6 @@
                 width: 50%;
                 margin-left: auto;
                 justify-content: stretch;
-                // border-top: 1px solid black;
-                // padding-top: 1rem;
             }
             @include desktop {
                 display: none;

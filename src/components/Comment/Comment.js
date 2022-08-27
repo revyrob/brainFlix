@@ -1,7 +1,6 @@
 import "./Comment.scss";
 import { Link } from "react-router-dom";
 
-//
 function Comment({ timestamp, name, comment, id }) {
   //used to get my timestamp into date
   //hold onto for future reference
